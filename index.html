@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./vueDoc.js"></script>
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div v-if="!loading">
+        <h1>{{time}} seconds left</h1>
+        <table>
+          <tr v-for="(row, y) in points">
+            <td
+              v-for="(point,x) in row"
+              @click="setTile(x,y)"
+              :class="setStyle(x,y)"
+            >
+              {{points[y][x]}}
+            </td>
+          </tr>
+        </table>
+
+        <button @click="submit">Submit</button>
+        <button @click="loading=true">Stop</button>
+      </div>
+      <div v-else>
+        <input v-model="ally" />
+        <input v-model="enemy" />
+        <input v-model="token" />
+        <button @click="init(true)">Start</button>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

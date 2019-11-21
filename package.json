@@ -1,0 +1,20 @@
+{
+  "name": "procon-2019",
+  "version": "1.0.0",
+  "description": "procon",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx nodemon ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Delgersaikhan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}

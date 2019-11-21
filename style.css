@@ -1,0 +1,32 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+}
+/* div {
+  display: flex;
+  flex-direction: column;
+} */
+
+td {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border: 1px solid gray;
+}
+
+.ally {
+  background: orange;
+}
+
+.enemy {
+  background: blue;
+}
+
+.active {
+  border-radius: 10px;
+}
