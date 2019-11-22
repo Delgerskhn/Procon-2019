@@ -85,6 +85,9 @@ var app = new Vue({
             this.pointTiles = [];
             this.request = [];
           }
+          if (this.time === 1.5) {
+            this.submit();
+          }
         }.bind(this),
         500
       );
@@ -103,7 +106,7 @@ var app = new Vue({
             this.points = points;
             this.tiled = tiled;
             this.teams = teams;
-            this.time = time / 1 + 1.5;
+            this.time = time / 1 + 1;
             console.log("newtime", this.time, time / 1);
             this.timer();
             this.turnLimit = turnLimit;
@@ -138,7 +141,7 @@ var app = new Vue({
               });
             });
 
-            console.log(res.data, this.pointTiles);
+            console.log("res.data", res.data, "pointTiles", this.pointTiles);
           })
           .catch(err => {
             if (err) console.log(err);
