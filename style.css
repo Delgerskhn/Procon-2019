@@ -12,11 +12,16 @@ body {
   flex-direction: column;
 } */
 
+.tiled {
+  background: red;
+}
+
 td {
   height: 30px;
   width: 30px;
   text-align: center;
   border: 1px solid gray;
+  cursor: pointer;
 }
 
 .ally {
@@ -28,5 +33,13 @@ td {
 }
 
 .active {
-  border-radius: 10px;
+  border-radius: 20px;
+}
+
+.board {
+  display: flex;
+}
+
+h5 {
+  margin: 5px;
 }

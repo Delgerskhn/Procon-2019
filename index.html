@@ -12,7 +12,12 @@
   <body>
     <div class="container">
       <div v-if="!loading">
-        <h1>{{time}} seconds left</h1>
+        <div>
+          <h2>{{time}} seconds</h2>
+          <h5>ALLY---AREA:{{score.allyArea}} TILE:{{score.allyTile}}</h5>
+          <h5>ENEMY---AREA:{{score.enemyArea}} TILE:{{score.enemyTile}}</h5>
+        </div>
+
         <table>
           <tr v-for="(row, y) in points">
             <td
@@ -32,6 +37,7 @@
         <input v-model="ally" />
         <input v-model="enemy" />
         <input v-model="token" />
+        <input v-model="url" />
         <button @click="init(true)">Start</button>
       </div>
     </div>
